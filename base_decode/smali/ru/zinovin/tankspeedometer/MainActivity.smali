@@ -1658,37 +1658,7 @@
 
     move-result v3
 
-    invoke-virtual {p0}, Lru/zinovin/tankspeedometer/MainActivity;->I()V
-
-    goto :goto_3
-
-    :cond_a
-    :goto_2
-    array-length v0, v0
-
-    if-lez v0, :cond_b
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lru/zinovin/tankspeedometer/DownloadActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "DOWNLOAD_MODE"
-
-    const-string v2, "DOWNLOAD"
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "MANUAL_DOWNLOAD"
-
-    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
-
-    goto :goto_3
+    goto/16 :cond_b
 
     :cond_b
     invoke-static {}, LTf;->x()Ljava/lang/String;

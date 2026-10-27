@@ -102,6 +102,33 @@
 .method public static g(Ljava/lang/String;)LMf;
     .locals 13
 
+    const-string v12, "Custom Center"
+
+    invoke-virtual {p0, v12}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_not_custom
+
+    invoke-static {}, LF4;->E()Lk0;
+
+    move-result-object v12
+
+    iget-object v12, v12, Lk0;->b:Ljava/lang/Object;
+
+    check-cast v12, LMf;
+
+    const-string p0, "digital_instrumental_panel_custom"
+
+    iput-object p0, v12, LMf;->a:Ljava/lang/String;
+
+    const-string p0, "digital_instrumental_panel_micro"
+
+    iput-object p0, v12, LMf;->A:Ljava/lang/String;
+
+    return-object v12
+
+    :cond_not_custom
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const v0, 0x7f08012b

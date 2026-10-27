@@ -638,23 +638,6 @@
 
     move-result v0
 
-    if-nez v0, :cond_fallback_ok
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const-string v2, "layout"
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, p1, v2, v3}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v0
-
-    :cond_fallback_ok
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "layoutId="
