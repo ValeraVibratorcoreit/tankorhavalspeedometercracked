@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="ThemeImages">
+        <item>ic_theme_customcenter</item>
         <item>ic_theme_digital</item>
         <item>ic_theme_t500</item>
         <item>ic_theme_t300</item>
@@ -13,6 +14,7 @@
         <item>ic_theme_bmw</item>
     </string-array>
     <string-array name="ThemeTexts">
+        <item>Custom Center</item>
         <item>Digital</item>
         <item>Tank 500</item>
         <item>Tank 300</item>
@@ -25,6 +27,7 @@
         <item>BMW</item>
     </string-array>
     <string-array name="Themes">
+        <item>Custom Center</item>
         <item>Digital</item>
         <item>Tank 500</item>
         <item>Tank 300</item>

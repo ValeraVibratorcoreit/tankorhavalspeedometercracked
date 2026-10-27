@@ -1658,26 +1658,6 @@
 
     move-result v3
 
-    if-nez v3, :cond_9
-
-    invoke-static {}, LTf;->x()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, LTf;->l(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v1
-
-    goto :cond_9
-
-    :cond_8
-    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    goto :cond_9
-
-    :cond_9
     invoke-virtual {p0}, Lru/zinovin/tankspeedometer/MainActivity;->I()V
 
     goto :goto_3

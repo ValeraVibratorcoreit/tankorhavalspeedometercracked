@@ -1047,6 +1047,28 @@
 
     const-string v2, "speedometer_default"
 
+    # Override layout for CustomCenter theme
+    iget-object v4, p0, LKf;->b:Landroid/content/SharedPreferences;
+
+    const-string v5, "selectedTheme"
+
+    const-string v6, "Audi Virtual Cockpit"
+
+    invoke-interface {v4, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "Custom Center"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_custom_skip
+
+    const-string v3, "digital_instrumental_panel_haval_f7_custom"
+
+    :cond_custom_skip
     if-eqz v3, :cond_1
 
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z

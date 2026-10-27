@@ -131,7 +131,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    goto :cond_2
 
     const p1, 0x7f13019c
 

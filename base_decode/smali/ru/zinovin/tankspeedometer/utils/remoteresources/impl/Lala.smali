@@ -20,7 +20,11 @@
 .method public final varargs execute(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
 
     return-object v0
 .end method
