@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="text_download_failed">
+        <item quantity="one">Failed to download %d resource</item>
+        <item quantity="other">Failed to download %d resources</item>
+    </plurals>
+    <plurals name="text_some_resources_failed">
+        <item quantity="one">Failed to download %d resource</item>
+        <item quantity="other">Failed to download %d resources</item>
+    </plurals>
+</resources>

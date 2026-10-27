@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+    <TextView
+        android:textSize="90sp"
+        android:textColor="@color/text_night_main"
+        android:gravity="bottom"
+        android:id="@+id/speedInfoBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:fontFamily="@font/parsi_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="32sp"
+        android:textColor="#ff6d6d6f"
+        android:id="@+id/speedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-48dp"
+        android:text="km/h"
+        android:fontFamily="@font/parsi_light"
+        app:layout_constraintEnd_toEndOf="@+id/speedInfoBlock"
+        app:layout_constraintStart_toStartOf="@+id/speedInfoBlock"
+        app:layout_constraintTop_toBottomOf="@+id/speedInfoBlock"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

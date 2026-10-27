@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="ThemeImages">
+        <item>ic_theme_digital</item>
+        <item>ic_theme_t500</item>
+        <item>ic_theme_t300</item>
+        <item>ic_theme_t300_el</item>
+        <item>ic_theme_eclipse</item>
+        <item>ic_theme_kia</item>
+        <item>ic_theme_night_center</item>
+        <item>ic_theme_audivc</item>
+        <item>ic_theme_ford</item>
+        <item>ic_theme_bmw</item>
+    </array>
+    <array name="ThemeTexts">
+        <item>Digital</item>
+        <item>Tank 500</item>
+        <item>Tank 300</item>
+        <item>Tank 300 El</item>
+        <item>Moon Eclipse</item>
+        <item>KIA</item>
+        <item>Night center</item>
+        <item>Audi Virtual Cockpit</item>
+        <item>Mustang GT</item>
+        <item>BMW</item>
+    </array>
+    <array name="Themes">
+        <item>Digital</item>
+        <item>Tank 500</item>
+        <item>Tank 300</item>
+        <item>Tank 300 El</item>
+        <item>Moon Eclipse</item>
+        <item>KIA</item>
+        <item>Night center</item>
+        <item>Audi Virtual Cockpit</item>
+        <item>Mustang GT</item>
+        <item>BMW</item>
+    </array>
+    <array name="bg_mode_entries">
+        <item>@string/bg_mode_static</item>
+        <item>@string/bg_mode_time</item>
+        <item>@string/bg_mode_sun</item>
+    </array>
+    <array name="bg_mode_values">
+        <item>static</item>
+        <item>time</item>
+        <item>sun</item>
+    </array>
+    <array name="bg_period_keys">
+        <item>morning</item>
+        <item>day</item>
+        <item>evening</item>
+        <item>night</item>
+    </array>
+    <array name="bg_period_names">
+        <item>@string/bg_time_morning</item>
+        <item>@string/bg_time_day</item>
+        <item>@string/bg_time_evening</item>
+        <item>@string/bg_time_night</item>
+    </array>
+    <array name="bg_sun_period_keys">
+        <item>day</item>
+        <item>night</item>
+    </array>
+    <array name="bg_sun_period_names">
+        <item>@string/bg_time_day</item>
+        <item>@string/bg_time_night</item>
+    </array>
+    <array name="car_list">
+        <item>TANK 300</item>
+        <item>TANK 400</item>
+        <item>TANK 500</item>
+        <item>TANK 500 BlackTrail</item>
+        <item>TANK 700</item>
+        <item>TANK 700 Edition One</item>
+        <item>HAVAL F7</item>
+        <item>HAVAL H3</item>
+        <item>HAVAL H7</item>
+        <item>HAVAL H9</item>
+        <item>WEY 07</item>
+        <item>WEY 80</item>
+    </array>
+    <array name="car_list_values">
+        <item>tank_300</item>
+        <item>tank_400</item>
+        <item>tank_500</item>
+        <item>tank_500bt</item>
+        <item>tank_700</item>
+        <item>tank_700eo</item>
+        <item>haval_f7</item>
+        <item>haval_h3</item>
+        <item>haval_h7</item>
+        <item>haval_h9</item>
+        <item>wey_07</item>
+        <item>wey_80</item>
+    </array>
+    <array name="ip_type_list">
+        <item>@string/text_type1_rb</item>
+        <item>@string/text_type3_rb</item>
+    </array>
+    <array name="ip_type_values">
+        <item>1</item>
+        <item>3</item>
+    </array>
+    <array name="lang_list">
+        <item>@string/text_lang_sys_rb</item>
+        <item>@string/text_lang_ru_rb</item>
+        <item>@string/text_lang_en_rb</item>
+        <item>@string/text_lang_ar_rb</item>
+    </array>
+    <array name="lang_list_values">
+        <item>sys</item>
+        <item>ru</item>
+        <item>en</item>
+        <item>ar</item>
+    </array>
+    <array name="music_app">
+        <item>Yandex Music</item>
+        <item>Yandex Music Auto</item>
+        <item>Zvuk</item>
+        <item>VK Music</item>
+        <item>MTS Music</item>
+        <item>Spotify</item>
+        <item>User app</item>
+    </array>
+    <array name="music_package">
+        <item>ru.yandex.music</item>
+        <item>yandex.auto.uma</item>
+        <item>com.zvooq.openplay</item>
+        <item>com.uma.musicvk</item>
+        <item>ru.mts.music.android</item>
+        <item>com.spotify.music</item>
+        <item>userapp</item>
+    </array>
+    <array name="music_values">
+        <item>ym</item>
+        <item>ym.auto</item>
+        <item>zvuk</item>
+        <item>vk</item>
+        <item>mts</item>
+        <item>spotify</item>
+        <item>userapp</item>
+    </array>
+    <array name="navi_app">
+        <item>Yandex Navigator</item>
+        <item>Yandex Maps</item>
+        <item>YN Auto</item>
+        <item>Yandex Maps Auto</item>
+        <item>User app</item>
+    </array>
+    <array name="navi_package">
+        <item>ru.yandex.yandexnavi</item>
+        <item>ru.yandex.yandexmaps</item>
+        <item>ru.yandex.yandexnavi.auto|ru.yandex.yandexnavi.auto/com.yandex.navi.cluster.ClusterNavigationActivity</item>
+        <item>ru.yandex.yandexnavi.auto</item>
+        <item>userapp</item>
+    </array>
+    <array name="ym_list">
+        <item>@string/ym_list_op1</item>
+        <item>@string/ym_list_op2</item>
+        <item>@string/ym_list_op3</item>
+        <item>@string/ym_list_op4</item>
+        <item>@string/ym_list_op5</item>
+        <item>@string/ym_list_op6</item>
+        <item>@string/ym_list_op7</item>
+    </array>
+    <array name="ym_values">
+        <item>yandexmusic://radio/user/{ВашЛогин}?play=1</item>
+        <item>yandexmusic://users/{ВашЛогин}/playlists/{list_id}?play=1</item>
+        <item>yandexmusic://playlist/daily?play=1</item>
+        <item>yandexmusic://playlist/premiere?play=1</item>
+        <item>yandexmusic://playlist/secret?play=1</item>
+        <item>yandexmusic://playlist/origin?play=1</item>
+        <item>yandexmusic://users/{ВашЛогин}/playlists/{list_id}?play=1</item>
+    </array>
+</resources>

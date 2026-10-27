@@ -1,0 +1,9 @@
+package com.jcraft.jsch;
+
+/* JADX INFO: loaded from: classes.dex */
+public class DHEC384 extends DHECN {
+    public DHEC384() {
+        this.sha_name = "sha-384";
+        this.key_size = 384;
+    }
+}

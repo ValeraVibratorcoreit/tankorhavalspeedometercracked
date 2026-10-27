@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="ru.zinovin.tankspeedometer" platformBuildVersionCode="34" platformBuildVersionName="14">
+    <permission android:name="ru.zinovin.tankspeedometer.RESTART_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="ru.zinovin.tankspeedometer.RESTART_PERMISSION"/>
+    <permission android:name="ru.zinovin.tankspeedometer.READ_PREFS" android:protectionLevel="signature"/>
+    <uses-permission android:name="ru.zinovin.tankspeedometer.READ_PREFS"/>
+    <permission android:name="ru.zinovin.tankspeedometer.NAVIPACKAGE_CHANGED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="ru.zinovin.tankspeedometer.NAVIPACKAGE_CHANGED_PERMISSION"/>
+    <permission android:name="ru.zinovin.tankspeedometer.NAVI_GUIDANCE_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="ru.zinovin.tankspeedometer.NAVI_GUIDANCE_PERMISSION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-feature android:name="android.hardware.type.automotive" android:required="true"/>
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
+    <uses-permission android:name="com.gwm.android.adapter.permission.GET_DATA"/>
+    <permission android:name="ru.zinovin.tankspeedometer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="ru.zinovin.tankspeedometer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:dataExtractionRules="@xml/data_extraction_rules" android:extractNativeLibs="false" android:fullBackupContent="@xml/backup_rules" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="ru.zinovin.tankspeedometer.TankSpeedometerApp" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme.TankSpeedometer" android:usesCleartextTraffic="true">
+        <receiver android:enabled="true" android:exported="true" android:name="ru.zinovin.tankspeedometer.BootReceiver" android:permission="ru.zinovin.tankspeedometer.RESTART_PERMISSION">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_USER_PRESENT"/>
+                <action android:name="ru.zinovin.tankspeedometer.T500_IP_RESTART"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:label="@string/title_activity_download" android:name="ru.zinovin.tankspeedometer.DownloadActivity"/>
+        <activity android:exported="false" android:label="@string/title_activity_download2" android:name="ru.zinovin.tankspeedometer.DownloadActivity2"/>
+        <activity android:exported="false" android:name="ru.zinovin.tankspeedometer.FakeActivity"/>
+        <activity android:exported="false" android:name="ru.zinovin.tankspeedometer.preferences.WifiActivity"/>
+        <activity android:exported="false" android:label="@string/title_activity_images" android:name="ru.zinovin.tankspeedometer.view.ImageSelectionActivity"/>
+        <activity android:exported="false" android:label="@string/pref_cat_naviwindow_summary" android:name="ru.zinovin.tankspeedometer.preferences.NaviWindowsConfigActivity"/>
+        <activity android:exported="false" android:label="@string/pref_cat_indicator_color_summary" android:name="ru.zinovin.tankspeedometer.preferences.IndicatorColorsConfigActivity"/>
+        <activity android:exported="false" android:label="@string/title_navi_settings_activity" android:name="ru.zinovin.tankspeedometer.preferences.NaviSettingsActivity"/>
+        <activity android:exported="false" android:label="@string/title_music_settings_activity" android:name="ru.zinovin.tankspeedometer.preferences.MusicSettingsActivity"/>
+        <activity android:exported="false" android:label="@string/title_indicator_settings_activity" android:name="ru.zinovin.tankspeedometer.preferences.IndicatorSettingsActivity"/>
+        <activity android:exported="false" android:label="@string/title_activity_settings" android:name="ru.zinovin.tankspeedometer.BackupActivity"/>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="ru.zinovin.tankspeedometer.StartActivity" android:taskAffinity=""/>
+        <activity android:exported="false" android:launchMode="singleInstance" android:name="ru.zinovin.tankspeedometer.ServicesStartActivity" android:taskAffinity=""/>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="ru.zinovin.tankspeedometer.HudActivity" android:taskAffinity=""/>
+        <activity android:exported="true" android:launchMode="singleTop" android:name="ru.zinovin.tankspeedometer.MainActivity" android:theme="@style/Theme.TankSpeedometer.Settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="ru.zinovin.tankspeedometer.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <provider android:authorities="ru.zinovin.tankspeedometer.provider" android:exported="true" android:name="ru.zinovin.tankspeedometer.providers.AppStatusProvider"/>
+        <provider android:authorities="ru.zinovin.tankspeedometer.prefsprovider" android:exported="true" android:name="ru.zinovin.tankspeedometer.providers.PrefsProvider" android:readPermission="ru.zinovin.tankspeedometer.READ_PREFS"/>
+        <provider android:authorities="ru.zinovin.tankspeedometer.initprovider" android:exported="false" android:initOrder="100" android:name="ru.zinovin.tankspeedometer.providers.InitProvider"/>
+        <service android:name="ru.zinovin.tankspeedometer.service.LogcatService"/>
+        <service android:name="ru.zinovin.tankspeedometer.service.InternetMonitorService"/>
+        <service android:name="ru.zinovin.tankspeedometer.BasicInstrumentalPanel"/>
+        <service android:name="ru.zinovin.tankspeedometer.SpedometerPanel"/>
+        <service android:name="ru.zinovin.tankspeedometer.service.YnActivatingService"/>
+        <service android:name="ru.zinovin.tankspeedometer.service.TboxMonitorService"/>
+        <provider android:authorities="ru.zinovin.tankspeedometer.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
