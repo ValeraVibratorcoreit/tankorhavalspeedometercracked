@@ -110,7 +110,7 @@
 
     if-eqz v12, :cond_not_custom
 
-    invoke-static {}, LF4;->E()Lk0;
+    invoke-static {}, LF4;->B()Lk0;
 
     move-result-object v12
 
@@ -521,7 +521,7 @@
     goto/16 :goto_1
 
     :pswitch_0
-    invoke-static {}, LF4;->E()Lk0;
+    invoke-static {}, LF4;->B()Lk0;
 
     move-result-object p0
 
@@ -566,7 +566,7 @@
     goto/16 :goto_1
 
     :pswitch_3
-    invoke-static {}, LF4;->E()Lk0;
+    invoke-static {}, LF4;->B()Lk0;
 
     move-result-object p0
 
@@ -624,7 +624,7 @@
     goto/16 :goto_1
 
     :pswitch_7
-    invoke-static {}, LF4;->E()Lk0;
+    invoke-static {}, LF4;->B()Lk0;
 
     move-result-object p0
 
@@ -654,7 +654,7 @@
     goto/16 :goto_1
 
     :pswitch_9
-    invoke-static {}, LF4;->E()Lk0;
+    invoke-static {}, LF4;->B()Lk0;
 
     move-result-object p0
 
@@ -728,7 +728,7 @@
     goto :goto_1
 
     :pswitch_f
-    invoke-static {}, LF4;->E()Lk0;
+    invoke-static {}, LF4;->B()Lk0;
 
     move-result-object p0
 
@@ -773,7 +773,7 @@
     goto :goto_1
 
     :pswitch_12
-    invoke-static {}, LF4;->E()Lk0;
+    invoke-static {}, LF4;->B()Lk0;
 
     move-result-object p0
 
@@ -792,7 +792,7 @@
     goto :goto_1
 
     :pswitch_13
-    invoke-static {}, LF4;->E()Lk0;
+    invoke-static {}, LF4;->B()Lk0;
 
     move-result-object p0
 

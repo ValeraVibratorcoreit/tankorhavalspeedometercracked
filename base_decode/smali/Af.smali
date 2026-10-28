@@ -18,6 +18,8 @@
 
 .field public e:I
 
+.field public bcIndex:I
+
 .field public f:Z
 
 .field public final g:LDg;
@@ -139,6 +141,27 @@
 
     iput-boolean v2, v0, LAf;->f:Z
 
+    const-string v2, "selectedTheme"
+
+    const-string v3, "Audi Virtual Cockpit"
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "Custom Center"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_custom_info_done
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v0, LAf;->f:Z
+
+    :cond_custom_info_done
     const-string v2, "extFirmware"
 
     const/4 v10, 0x1
@@ -516,6 +539,10 @@
     move-result v3
 
     iput v3, v0, LAf;->c:I
+
+    const/4 v5, 0x1
+
+    iput v5, v0, LAf;->bcIndex:I
 
     invoke-virtual {v2}, LK2;->y()[Lzf;
 
@@ -4293,6 +4320,118 @@
     return-object v0
 .end method
 
+.method public final bc()Lzf;
+    .locals 3
+
+    iget-object v0, p0, LAf;->b:LBq;
+
+    iget-object v0, v0, LBq;->b:LK2;
+
+    invoke-virtual {v0}, LK2;->l()[Lzf;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    iget v2, p0, LAf;->bcIndex:I
+
+    if-gtz v2, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    if-lt v2, v1, :cond_1
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_1
+    aget-object v0, v0, v2
+
+    return-object v0
+.end method
+
+.method public final bcNext()V
+    .locals 3
+
+    iget-object v0, p0, LAf;->b:LBq;
+
+    iget-object v0, v0, LBq;->b:LK2;
+
+    invoke-virtual {v0}, LK2;->l()[Lzf;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    const/4 v1, 0x2
+
+    if-ge v0, v1, :cond_0
+
+    invoke-virtual {p0}, LAf;->f()V
+
+    return-void
+
+    :cond_0
+    iget v1, p0, LAf;->bcIndex:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    if-lt v1, v0, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    iput v1, p0, LAf;->bcIndex:I
+
+    invoke-virtual {p0}, LAf;->f()V
+
+    return-void
+.end method
+
+.method public final bcPrev()V
+    .locals 3
+
+    iget-object v0, p0, LAf;->b:LBq;
+
+    iget-object v0, v0, LBq;->b:LK2;
+
+    invoke-virtual {v0}, LK2;->l()[Lzf;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    const/4 v1, 0x2
+
+    if-ge v0, v1, :cond_0
+
+    invoke-virtual {p0}, LAf;->f()V
+
+    return-void
+
+    :cond_0
+    iget v1, p0, LAf;->bcIndex:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x1
+
+    if-ge v1, v2, :cond_1
+
+    add-int/lit8 v1, v0, -0x1
+
+    :cond_1
+    iput v1, p0, LAf;->bcIndex:I
+
+    invoke-virtual {p0}, LAf;->f()V
+
+    return-void
+.end method
+
 .method public final d()Lzf;
     .locals 3
 
@@ -4458,6 +4597,96 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-static {v0, v1}, Lyr;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 3
+
+    iget-boolean v0, p0, LAf;->f:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, LAf;->b:LBq;
+
+    iget-object v0, v0, LBq;->b:LK2;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, LAf;->b:LBq;
+
+    iget-object v0, v0, LBq;->a:LK2;
+
+    :goto_0
+    invoke-virtual {v0}, LK2;->w()[Lzf;
+
+    move-result-object v1
+
+    array-length v1, v1
+
+    if-lez v1, :cond_1
+
+    iget v2, p0, LAf;->c:I
+
+    add-int/lit8 v2, v2, -0x1
+
+    if-gez v2, :cond_1a
+
+    add-int/lit8 v2, v1, -0x1
+
+    :cond_1a
+    iput v2, p0, LAf;->c:I
+
+    :cond_1
+    invoke-virtual {v0}, LK2;->y()[Lzf;
+
+    move-result-object v1
+
+    array-length v1, v1
+
+    if-lez v1, :cond_2
+
+    iget v2, p0, LAf;->d:I
+
+    add-int/lit8 v2, v2, -0x1
+
+    if-gez v2, :cond_2a
+
+    add-int/lit8 v2, v1, -0x1
+
+    :cond_2a
+    iput v2, p0, LAf;->d:I
+
+    :cond_2
+    invoke-virtual {v0}, LK2;->l()[Lzf;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    if-lez v0, :cond_3
+
+    iget v1, p0, LAf;->e:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    if-gez v1, :cond_3a
+
+    add-int/lit8 v1, v0, -0x1
+
+    :cond_3a
+    iput v1, p0, LAf;->e:I
+
+    :cond_3
+    invoke-virtual {p0}, LAf;->f()V
+
+    const-string v0, "T500.INFO_PANEL"
+
+    const-string v1, "prev()"
 
     invoke-static {v0, v1}, Lyr;->e(Ljava/lang/String;Ljava/lang/String;)V
 
