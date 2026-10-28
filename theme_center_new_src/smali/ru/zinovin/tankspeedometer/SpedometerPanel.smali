@@ -5297,11 +5297,7 @@
 .method public final onBcNext(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lru/zinovin/tankspeedometer/SpedometerPanel;->Z:LAf;
-
-    invoke-virtual {v0}, LAf;->bcNext()V
-
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lru/zinovin/tankspeedometer/SpedometerPanel;->x(Z)V
 
