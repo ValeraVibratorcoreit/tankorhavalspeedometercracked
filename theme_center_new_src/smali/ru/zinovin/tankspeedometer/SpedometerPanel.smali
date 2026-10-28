@@ -2604,6 +2604,10 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    const-string v1, "android.intent.action.SCREEN_ON"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
     iget-object v1, p0, Lru/zinovin/tankspeedometer/SpedometerPanel;->r0:LO1;
 
     invoke-virtual {p0, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
@@ -2925,16 +2929,8 @@
 
     move-result-object v2
 
-    if-eqz v1, :cond_5
+    const/16 v5, 0x8
 
-    move v5, v6
-
-    goto :goto_4
-
-    :cond_5
-    move v5, v3
-
-    :goto_4
     invoke-static {v2, v5}, LKf;->p(Landroid/view/View;I)V
 
     const v2, 0x7f0b01e0

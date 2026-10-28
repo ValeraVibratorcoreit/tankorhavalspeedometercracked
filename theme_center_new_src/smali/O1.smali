@@ -61,8 +61,35 @@
 
     move-result-object v7
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v7, :cond_goto5
 
+    const-string v9, "android.intent.action.SCREEN_ON"
+
+    invoke-virtual {v7, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_check_settings
+
+    check-cast v15, Lru/zinovin/tankspeedometer/SpedometerPanel;
+
+    iget-object v1, v15, Lru/zinovin/tankspeedometer/SpedometerPanel;->u:Lru/zinovin/tankspeedometer/view/speedometer/SpeedometerView;
+
+    if-eqz v1, :cond_sweep_v
+
+    invoke-virtual {v1}, Lru/zinovin/tankspeedometer/view/speedometer/SpeedometerView;->forceSweep()V
+
+    :cond_sweep_v
+    iget-object v1, v15, Lru/zinovin/tankspeedometer/SpedometerPanel;->v:Lru/zinovin/tankspeedometer/view/speedometer/SpeedometerView;
+
+    if-eqz v1, :cond_sweep_done
+
+    invoke-virtual {v1}, Lru/zinovin/tankspeedometer/view/speedometer/SpeedometerView;->forceSweep()V
+
+    :cond_sweep_done
+    return-void
+
+    :cond_check_settings
     const-string v9, "ru.zinovin.tankspeedometer.T500_IP_SETTINGS_CHANGED"
 
     invoke-virtual {v7, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -71,6 +98,7 @@
 
     if-nez v7, :cond_0
 
+    :cond_goto5
     goto/16 :goto_5
 
     :cond_0

@@ -1013,6 +1013,56 @@
     .end array-data
 .end method
 
+.method public final forceSweep()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lru/zinovin/tankspeedometer/view/speedometer/SpeedometerView;->didSweep:Z
+
+    invoke-virtual {p0}, Lru/zinovin/tankspeedometer/view/speedometer/SpeedometerView;->runSweep()V
+
+    return-void
+.end method
+
+.method protected onWindowVisibilityChanged(I)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Lru/zinovin/tankspeedometer/view/speedometer/SpeedometerView;->forceSweep()V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected onAttachedToWindow()V
+    .locals 0
+
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+
+    invoke-virtual {p0}, Lru/zinovin/tankspeedometer/view/speedometer/SpeedometerView;->forceSweep()V
+
+    return-void
+.end method
+
+.method protected onVisibilityChanged(Landroid/view/View;I)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Landroid/view/View;->onVisibilityChanged(Landroid/view/View;I)V
+
+    if-nez p2, :cond_0
+
+    if-ne p1, p0, :cond_0
+
+    invoke-virtual {p0}, Lru/zinovin/tankspeedometer/view/speedometer/SpeedometerView;->forceSweep()V
+
+    :cond_0
+    return-void
+.end method
+
 
 .method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
