@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/ts_bg_sidebar_item" android:paddingTop="12.0dp" android:paddingBottom="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ts_sidebar_item_height" android:paddingStart="20.0dp" android:paddingEnd="12.0dp"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/ts_item_icon" android:layout_width="@dimen/ts_sidebar_icon" android:layout_height="@dimen/ts_sidebar_icon" android:contentDescription="@null" android:layout_marginEnd="16.0dp" app:tint="@color/ts_sidebar_title_color"
-      xmlns:app="http://schemas.android.com/apk/res-auto" />
-    <TextView android:textSize="@dimen/ts_text_primary" android:textColor="@color/ts_sidebar_title_color" android:ellipsize="end" android:id="@id/ts_item_title" android:layout_width="0.0dp" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" />
-</LinearLayout>
