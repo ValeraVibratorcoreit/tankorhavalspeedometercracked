@@ -424,10 +424,6 @@
 
     iput-boolean v1, v15, LKf;->m:Z
 
-    iget-boolean v1, v15, LKf;->h:Z
-
-    if-nez v1, :cond_14
-
     invoke-virtual {v15}, Lru/zinovin/tankspeedometer/SpedometerPanel;->I()V
 
     goto/16 :goto_5

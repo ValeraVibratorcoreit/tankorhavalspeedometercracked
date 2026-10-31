@@ -61,3 +61,18 @@
 .field public y:Ljava/lang/String;
 
 .field public z:Z
+
+.field public D:I
+
+.field public E:I
+
+.field public F:I
+
+.field public G:I
+
+.field public H:I
+
+.field public I:I
+
+.field public J:I
+

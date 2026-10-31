@@ -106,6 +106,7 @@
     return-void
 .end method
 
+
 .method public final onLowMemory()V
     .locals 2
 

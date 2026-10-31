@@ -4400,6 +4400,8 @@
 
     move-result-object v7
 
+    if-eqz v7, :goto_5
+
     iget-boolean v8, v7, LMf;->b:Z
 
     if-nez v8, :cond_0

@@ -12,6 +12,58 @@
         <item>ic_theme_audivc</item>
         <item>ic_theme_ford</item>
         <item>ic_theme_bmw</item>
+        <item>ic_theme_split_ver_1</item>
+        <item>ic_theme_simple</item>
+        <item>ic_theme_silver</item>
+        <item>ic_theme_asiaforce</item>
+        <item>ic_theme_big_redblackwhite</item>
+        <item>ic_theme_huge_redblackwhite</item>
+        <item>ic_theme_glass_circles</item>
+        <item>ic_theme_green</item>
+        <item>ic_theme_blackchrome</item>
+        <item>ic_theme_blackchromer</item>
+        <item>ic_theme_lonely_big_speed</item>
+        <item>ic_theme_three_rings</item>
+        <item>ic_theme_three_big_rings</item>
+        <item>ic_theme_rr_style</item>
+        <item>ic_theme_bigblue</item>
+        <item>ic_theme_biggreen</item>
+        <item>ic_theme_bigred</item>
+        <item>ic_theme_hrome_shine</item>
+        <item>ic_theme_nmr</item>
+        <item>ic_theme_golden_arrows</item>
+        <item>ic_theme_huge_rr_style</item>
+        <item>ic_theme_triple_silver</item>
+        <item>ic_theme_vaz_01</item>
+        <item>ic_theme_blue_crown</item>
+        <item>ic_theme_aurus_24</item>
+        <item>ic_theme_heptagon</item>
+        <item>ic_theme_heptagon_s</item>
+        <item>ic_theme_whiteness</item>
+        <item>ic_theme_four_coins</item>
+        <item>ic_theme_four_oranges</item>
+        <item>ic_theme_chrono</item>
+        <item>ic_theme_quartet</item>
+        <item>ic_theme_twilight</item>
+        <item>ic_theme_golden_thread</item>
+        <item>ic_theme_threads_on_glass</item>
+        <item>ic_theme_monochrom</item>
+        <item>ic_theme_theme_36</item>
+        <item>ic_theme_golden_thread_1</item>
+        <item>ic_theme_black_eggs</item>
+        <item>ic_theme_wet_asphalt</item>
+        <item>ic_theme_clouds</item>
+        <item>ic_theme_new_horizons</item>
+        <item>ic_theme_globe</item>
+        <item>ic_theme_need_for_speed</item>
+        <item>ic_theme_need_for_speed_black</item>
+        <item>ic_theme_gray_rainbow</item>
+        <item>ic_theme_navi_panorama</item>
+        <item>ic_theme_green_mile</item>
+        <item>ic_theme_black_mile</item>
+        <item>ic_theme_orange_mile</item>
+        <item>ic_theme_blue_mile</item>
+        <item>ic_theme_cool_neon</item>
     </string-array>
     <string-array name="ThemeTexts">
         <item>Custom Center</item>
@@ -25,6 +77,58 @@
         <item>Audi Virtual Cockpit</item>
         <item>Mustang GT</item>
         <item>BMW</item>
+        <item>Split Ver 1</item>
+        <item>Simple</item>
+        <item>Silver</item>
+        <item>AsiaForce</item>
+        <item>Big RedBlackWhite</item>
+        <item>Huge RedBlackWhite</item>
+        <item>Glass circles</item>
+        <item>Green</item>
+        <item>BlackChrome</item>
+        <item>BlackChromeR</item>
+        <item>Lonely big speed</item>
+        <item>Three rings</item>
+        <item>Three big rings</item>
+        <item>RR Style</item>
+        <item>BigBlue</item>
+        <item>BigGreen</item>
+        <item>BigRed</item>
+        <item>Сhrome shine</item>
+        <item>NMR</item>
+        <item>Golden arrows</item>
+        <item>Huge RR Style</item>
+        <item>Triple silver</item>
+        <item>VAZ 01</item>
+        <item>Blue crown</item>
+        <item>Aurus</item>
+        <item>Heptagon</item>
+        <item>Heptagon S</item>
+        <item>Whiteness</item>
+        <item>Four coins</item>
+        <item>Four oranges</item>
+        <item>Chrono</item>
+        <item>Quartet</item>
+        <item>Twilight</item>
+        <item>Golden thread</item>
+        <item>Threads on glass</item>
+        <item>Monochrom</item>
+        <item>Theme 36</item>
+        <item>Golden thread 1</item>
+        <item>Black eggs</item>
+        <item>Wet Asphalt</item>
+        <item>Clouds</item>
+        <item>New Horizons</item>
+        <item>Globe</item>
+        <item>Need for speed</item>
+        <item>Need for speed (black)</item>
+        <item>Gray Rainbow</item>
+        <item>Navi panorama</item>
+        <item>Green Mile</item>
+        <item>Black Mile</item>
+        <item>Orange Mile</item>
+        <item>Blue Mile</item>
+        <item>Cool Neon</item>
     </string-array>
     <string-array name="Themes">
         <item>Custom Center</item>
@@ -38,6 +142,58 @@
         <item>Audi Virtual Cockpit</item>
         <item>Mustang GT</item>
         <item>BMW</item>
+        <item>Split Ver 1</item>
+        <item>Simple</item>
+        <item>Silver</item>
+        <item>AsiaForce</item>
+        <item>Big RedBlackWhite</item>
+        <item>Huge RedBlackWhite</item>
+        <item>Glass circles</item>
+        <item>Green</item>
+        <item>BlackChrome</item>
+        <item>BlackChromeR</item>
+        <item>Lonely big speed</item>
+        <item>Three rings</item>
+        <item>Three big rings</item>
+        <item>RR Style</item>
+        <item>BigBlue</item>
+        <item>BigGreen</item>
+        <item>BigRed</item>
+        <item>Сhrome shine</item>
+        <item>NMR</item>
+        <item>Golden arrows</item>
+        <item>Huge RR Style</item>
+        <item>Triple silver</item>
+        <item>VAZ 01</item>
+        <item>Blue crown</item>
+        <item>Aurus</item>
+        <item>Heptagon</item>
+        <item>Heptagon S</item>
+        <item>Whiteness</item>
+        <item>Four coins</item>
+        <item>Four oranges</item>
+        <item>Chrono</item>
+        <item>Quartet</item>
+        <item>Twilight</item>
+        <item>Golden thread</item>
+        <item>Threads on glass</item>
+        <item>Monochrom</item>
+        <item>Theme 36</item>
+        <item>Golden thread 1</item>
+        <item>Black eggs</item>
+        <item>Wet Asphalt</item>
+        <item>Clouds</item>
+        <item>New Horizons</item>
+        <item>Globe</item>
+        <item>Need for speed</item>
+        <item>Need for speed (black)</item>
+        <item>Gray Rainbow</item>
+        <item>Navi panorama</item>
+        <item>Green Mile</item>
+        <item>Black Mile</item>
+        <item>Orange Mile</item>
+        <item>Blue Mile</item>
+        <item>Cool Neon</item>
     </string-array>
     <string-array name="bg_mode_entries">
         <item>@string/bg_mode_static</item>

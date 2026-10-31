@@ -102,6 +102,15 @@
 .method public static g(Ljava/lang/String;)LMf;
     .locals 13
 
+    invoke-static {p0}, Lru/zinovin/tankspeedometer/SplitThemeManager;->getTheme(Ljava/lang/String;)LMf;
+
+    move-result-object v12
+
+    if-eqz v12, :cond_check_split_done
+
+    return-object v12
+
+    :cond_check_split_done
     const-string v12, "Custom Center"
 
     invoke-virtual {p0, v12}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z

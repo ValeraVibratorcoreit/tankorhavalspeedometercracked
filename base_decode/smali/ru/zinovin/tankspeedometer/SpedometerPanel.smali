@@ -1655,8 +1655,13 @@
     goto :goto_2
 
     :cond_5
+    iget v4, v6, LMf;->J:I
+
+    if-nez v4, :cond_use_needle_i
+
     iget v4, v6, LMf;->i:I
 
+    :cond_use_needle_i
     invoke-static {v4}, LTf;->z(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
@@ -5152,18 +5157,11 @@
 
     iget-boolean p1, p0, LKf;->h:Z
 
-    if-nez p1, :cond_8
+    if-eqz p1, :cond_8a
 
-    iget-object p1, p0, Lru/zinovin/tankspeedometer/SpedometerPanel;->V:Ljava/lang/String;
+    goto :cond_8
 
-    const-string v0, "3"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
+    :cond_8a
     invoke-virtual {p0}, Lru/zinovin/tankspeedometer/SpedometerPanel;->I()V
 
     :cond_8
