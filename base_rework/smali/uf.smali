@@ -163,7 +163,7 @@
 
     invoke-virtual {v11, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    const-string v0, "80"
+    const-string v0, "60"
 
     const v1, 0x7f130121
 
@@ -173,7 +173,7 @@
 
     move-result-object v14
 
-    const-string v0, "0.71"
+    const-string v0, "0.528"
 
     const v1, 0x7f130117
 

@@ -3849,6 +3849,45 @@
 .method public static t()F
     .locals 4
 
+    invoke-static {}, Ln1;->a()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lmk;->l(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "fuel_custom_tank_enabled"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    if-nez v3, :cond_car_model_t
+
+    const-string v1, "carModel"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "haval_f7"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_car_model_t
+
+    const/high16 v0, 0x42700000    # 60.0f
+
+    return v0
+
+    :cond_car_model_t
     const/4 v0, 0x0
 
     const-string v1, "persist.vendor.gwm.cfg.project.code"
@@ -4228,6 +4267,45 @@
 .method public static u()F
     .locals 4
 
+    invoke-static {}, Ln1;->a()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lmk;->l(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "fuel_custom_tank_enabled"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    if-nez v3, :cond_car_model_u
+
+    const-string v1, "carModel"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "haval_f7"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_car_model_u
+
+    const v0, 0x3f072b02    # 0.528f
+
+    return v0
+
+    :cond_car_model_u
     const/4 v0, 0x0
 
     const-string v1, "persist.vendor.gwm.cfg.project.code"
