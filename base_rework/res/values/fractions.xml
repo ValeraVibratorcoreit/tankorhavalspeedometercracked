@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <fraction name="centerInfoPanelBias">0.61</fraction>
-    <fraction name="centerInfoPanelBiasNightCenterHorizontal">0.65</fraction>
-    <fraction name="centerInfoPanelBiasRange">0.61</fraction>
-    <fraction name="rightInfoPanelBiasNightCenter">0.75</fraction>
-</resources>
